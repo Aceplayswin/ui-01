@@ -20,7 +20,7 @@ const GamesDisplay = ({ section }) => {
   const { slots, casino, fishing, poker } = useGames();
 
   const excludeProviders = [
-    'MAC88', '18Peaches', 'Veliplay', 'aviatrix', 'InOut Minigames', 
+    'MAC88', '18Peaches', 'Veliplay', 'aviatrix', 'InOut Minigames',
     'Galaxsys', 'Smartsoft', '2J', 'turbogamesasia', 'Aura Gaming', 'India Lotto'
   ];
 

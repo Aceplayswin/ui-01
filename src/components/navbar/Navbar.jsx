@@ -122,6 +122,7 @@ function Navbar() {
   // Game Categories with icons matching the neon design
   // Game Categories for the sub-navbar
   const games = [
+    { name: "Crash Games", icon: "🚀" },
     { name: "Roulette", icon: "🎡" },
     { name: "Blackjack", icon: "🃏" },
     { name: "Baccarat", icon: "💎" },
@@ -140,6 +141,8 @@ function Navbar() {
     const game = games[index];
     if (game.name === "Roulette") {
       navigate("/roulette");
+    } else if (game.name === "Crash Games") {
+      scrollToSection("aviator");
     } else {
       scrollToSection("casino-lobby");
     }
@@ -317,7 +320,17 @@ function Navbar() {
     }
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      const isMobile = window.innerWidth < 768
+      const offset = isMobile ? 95 : 135
+      const bodyRect = document.body.getBoundingClientRect().top
+      const elementRect = element.getBoundingClientRect().top
+      const elementPosition = elementRect - bodyRect
+      const offsetPosition = elementPosition - offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      })
     }
     setMenuOpen(false)
   }

@@ -144,7 +144,7 @@ const RoundDetailsModal = ({ isOpen, onClose, transaction }) => {
                 ) : (
                   <div className="mt-10 pt-8 border-t border-black/10 dark:border-white/10 text-center">
                     <div className={`inline-flex items-center gap-4 px-8 py-4 rounded-full font-black uppercase tracking-[0.2em] text-[10px] ${netProfit < 0 ? 'bg-rose-500/10 text-rose-500 border border-rose-500/20' :
-                        'bg-emerald-500/10 text-emerald-500 border border-emerald-500/20'
+                      'bg-emerald-500/10 text-emerald-500 border border-emerald-500/20'
                       }`}>
                       {netProfit < 0 ? 'Net Loss' : 'Net Profit'}:
                       <span className="text-xl" style={{ fontFamily: FONTS.head }}>₹{Math.abs(netProfit || 0).toFixed(2)}</span>

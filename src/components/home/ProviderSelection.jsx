@@ -15,8 +15,9 @@ const providers = [
   { name: '2J', label: '2J', dbName: '2J' },
   { name: 'turbogamesasia', label: 'Turbogames World', dbName: 'turbogamesasia' },
   { name: 'Aura Gaming', label: 'Aura Gaming', dbName: 'Aura Gaming' },
-  { name: 'India Lotto', label: 'Lotto', dbName: 'India Lotto' }
-
+  { name: 'India Lotto', label: 'Lotto', dbName: 'India Lotto' },
+  { name: 'PgsGaming', label: 'PgsGaming', dbName: 'PgsGaming' },
+    { name: 'Odin Cockfighting', label: 'Odin Cockfighting', dbName: 'Odin Cockfighting' },
 ];
 
 const ProviderSelection = () => {

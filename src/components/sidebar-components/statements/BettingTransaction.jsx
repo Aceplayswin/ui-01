@@ -273,9 +273,9 @@ const BettingTransactionPage = () => {
                           </div>
                         </td>
                         <td className="px-4 py-3">
-                          <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[8.5px] font-black uppercase tracking-widest ${isProfit ? "bg-emerald-500/10 border border-emerald-500/10 text-emerald-400" : 
+                          <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[8.5px] font-black uppercase tracking-widest ${isProfit ? "bg-emerald-500/10 border border-emerald-500/10 text-emerald-400" :
                             isLoss ? "bg-rose-500/10 border border-rose-500/10 text-rose-400" :
-                            isCashout ? "bg-[#9966FF]/10 border border-[#9966FF]/10 text-[#9966FF]" : "bg-white/5 border border-white/10 text-white/40"
+                              isCashout ? "bg-[#9966FF]/10 border border-[#9966FF]/10 text-[#9966FF]" : "bg-white/5 border border-white/10 text-white/40"
                             }`}>
                             {transaction.r_match_status}
                           </div>
