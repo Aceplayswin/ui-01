@@ -34,7 +34,28 @@ import v8 from './providers/V8.png';
 import yesgaming from './providers/yesgaming.png';
 import rubyplay from './providers/RubyPlay.png';
 
+// New Providers
+import mac88 from './providers/mac88.png';
+import eighteenpeaches from './providers/18-preaches.png';
+import veliplay from './providers/veliplay.png';
+import aviatrix from './providers/aviatrix.png';
+import inout from './providers/inout-minigames.png';
+import galaxsys from './providers/galaxsys.png';
+import smartsoft from './providers/Smartsoft.png';
+import twoJ from './providers/2j.png';
+import turbogames from './providers/turbo-games.png';
+import auragaming from './providers/aura-gaming.png';
+import indialotto from './providers/india-lotto.png';
+import ongaming from './providers/ongaming.png';
+import ezugi1 from './providers/ezugi1.png';
+import evelution from './providers/evelution.png';
+import evolution2 from './providers/Evolution2.png';
+import luckysports from './providers/lucky-sports.png';
+
 const providersData = [
+  { logo: ezugi1, name: "Ezugi" },
+   { logo: evolution2, name: "Evolution2" },
+  // { logo: evelution, name: "Evolution" },
   // { logo: bf, name: "BF Games" },
   // { logo: bggaming, name: "BG Gaming" },
   // { logo: bigtiminggaming, name: "BTG" },
@@ -42,11 +63,11 @@ const providersData = [
   // { logo: booongo, name: "Booongo" },
   { logo: caleta, name: "Caleta" },
   { logo: cq9, name: "CQ9" },
-  { logo: endorphina, name: "Endorphina" },
-  { logo: evolution, name: "Evolution" },
+  // { logo: endorphina, name: "Endorphina" },
+  // { logo: evolution, name: "Evolution" },
   { logo: evoplay, name: "Evoplay" },
   // { logo: gameart, name: "GameArt" },
-  { logo: pgsoft, name: "PG Soft" },
+  // { logo: pgsoft, name: "PG Soft" },
   // { logo: playngo, name: "Play'n GO" },
   // { logo: playson, name: "Playson" },
   // { logo: playtech, name: "Playtech" },
@@ -58,8 +79,25 @@ const providersData = [
   // { logo: v8, name: "V8" },
   // // { logo: yesgaming, name: "Yes Gaming" },
   // // { logo: rubyplay, name: "Ruby Play" },
-  { logo: "src/components/home/providers/luck_sports.png", name: "luck sports" },
+  { logo: luckysports, name: "Lucky Sports" },
 
+  // Game Providers List
+  { logo: mac88, name: "MAC88" },
+  { logo: eighteenpeaches, name: "18Peaches" },
+  { logo: veliplay, name: "VeliPlay" },
+  { logo: aviatrix, name: "Aviatrix" },
+  { logo: inout, name: "InOut Minigames" },
+  { logo: galaxsys, name: "Galaxsys" },
+  { logo: smartsoft, name: "Smartsoft" },
+  { logo: twoJ, name: "2J" },
+  { logo: turbogames, name: "Turbogames World" },
+  { logo: auragaming, name: "Aura Gaming" },
+  { logo: indialotto, name: "India Lotto" },
+  { logo: pgsoft, name: "PgsGaming" },
+  { logo: ongaming, name: "Odin Cockfighting" },
+  { logo: evolution2, name: "Evolution2" },
+  { logo: luckysports, name: "Lucky Sports" },
+  
 ];
 
 const GameProvider = () => {
