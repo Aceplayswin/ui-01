@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FaWallet, FaMoneyBillWave, FaCoins } from "react-icons/fa";
 import { useColors } from '../../hooks/useColors';
@@ -12,7 +12,7 @@ const AccountInfo = ({ accountInfo }) => {
   const isGuest = accountInfo?.account_id === "guest" || localStorage.getItem("auth_secret_key") === "guest";
 
   // Premium initials-based avatar (inclusive for both male and female)
-  const avatarUrl = `https://api.dicebear.com/7.x/initials/svg?seed=${accountInfo.account_username}&backgroundColor=ffad33&fontSize=45&bold=true`;
+  const avatarUrl = `https://api.dicebear.com/7.x/initials/svg?seed=${accountInfo.account_username}&backgroundColor=60a5fa&fontSize=45&bold=true`;
 
   const remainingWager = parseFloat(accountInfo?.tbl_requiredplay_balance || 0);
   const casinoBonus = parseFloat(accountInfo?.account_casino_bonus || 0);
@@ -62,7 +62,7 @@ const AccountInfo = ({ accountInfo }) => {
       <div className="flex items-center justify-between mb-8 relative z-10">
         <div className="flex items-center gap-4">
           <div className="relative">
-            <div className={`w-14 h-14 rounded-2xl overflow-hidden border-2 border-brand/20 shadow-[0_0_20px_rgba(230,160,0,0.2)] group-hover:border-brand/50 transition-all duration-500 bg-gray-100 dark:bg-white/5 flex items-center justify-center relative`}>
+            <div className={`w-14 h-14 rounded-2xl overflow-hidden border-2 border-brand/20 shadow-[0_0_20px_rgba(29,78,216,0.2)] group-hover:border-brand/50 transition-all duration-500 bg-gray-100 dark:bg-white/5 flex items-center justify-center relative`}>
               <div className="absolute inset-0 bg-gradient-to-br from-brand/20 to-transparent"></div>
               <div className="w-8 h-8 rounded-full bg-brand/10 flex items-center justify-center text-brand">
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 opacity-80 group-hover:opacity-100 transition-opacity">
@@ -95,15 +95,15 @@ const AccountInfo = ({ accountInfo }) => {
               className={`p-2.5 rounded-[1.25rem] border transition-all duration-300 relative overflow-hidden group/box ${box.active
                   ? "bg-white/[0.04] border-black/10 dark:border-white/10 hover:border-brand/30"
                   : "bg-white/[0.01] border-black/5 dark:border-white/5 opacity-60"
-                } ${box.locked ? "border-amber-400/30 bg-amber-500/5" : ""}`}
+                } ${box.locked ? "border-brand/30 bg-brand/5" : ""}`}
             >
               <div className="relative z-10">
                 <div className="flex items-center gap-1 mb-1">
                   <div className="text-[7px] font-black text-black/30 dark:text-white/30 uppercase tracking-widest leading-none">{box.label}</div>
-                  {box.locked && <span className="text-[8px]">🔒</span>}
+                  {box.locked && <span className="text-[8px]">ðŸ”’</span>}
                 </div>
                 <div className={`text-[11px] sm:text-sm font-black flex items-center gap-0.5 leading-none ${box.active ? "text-black dark:text-white" : "text-black/20 dark:text-white/20"}`} style={{ fontFamily: FONTS.head, letterSpacing: '-0.02em' }}>
-                  {box.isCurrency && box.active && <span className="text-brand text-[9px] font-bold">₹</span>}
+                  {box.isCurrency && box.active && <span className="text-brand text-[9px] font-bold">â‚¹</span>}
                   <span className="whitespace-nowrap">{box.value}</span>
                 </div>
               </div>
@@ -116,24 +116,24 @@ const AccountInfo = ({ accountInfo }) => {
           ))}
         </div>
 
-        {/* Wagering Progress Banner — shown only when bonus is locked in wagering */}
+        {/* Wagering Progress Banner â€” shown only when bonus is locked in wagering */}
         {isWagering && (
-          <div className="mt-3 p-3 rounded-2xl border border-amber-400/20 bg-amber-500/5 relative overflow-hidden">
+          <div className="mt-3 p-3 rounded-2xl border border-brand/20 bg-brand/5 relative overflow-hidden">
             <div className="flex items-start justify-between mb-2">
               <div>
-                <p className="text-[8px] font-black uppercase tracking-widest text-amber-400 mb-0.5">Wagering In Progress 🔒</p>
+                <p className="text-[8px] font-black uppercase tracking-widest text-brand mb-0.5">Wagering In Progress ðŸ”’</p>
                 {wagerRequired > 0 ? (
                   <p className="text-[10px] font-bold text-black/60 dark:text-white/60">
-                    ₹{wagerCompleted.toLocaleString('en-IN')} completed of ₹{wagerRequired.toLocaleString('en-IN')} required
+                    â‚¹{wagerCompleted.toLocaleString('en-IN')} completed of â‚¹{wagerRequired.toLocaleString('en-IN')} required
                   </p>
                 ) : (
                   <p className="text-[10px] font-bold text-black/60 dark:text-white/60">
-                    ₹{remainingWager.toLocaleString('en-IN')} remaining to unlock
+                    â‚¹{remainingWager.toLocaleString('en-IN')} remaining to unlock
                   </p>
                 )}
               </div>
               <div className="text-right">
-                <span className="text-[11px] font-black text-amber-400">{wagerPct}%</span>
+                <span className="text-[11px] font-black text-brand">{wagerPct}%</span>
                 <p className="text-[7px] text-black/30 dark:text-white/30 uppercase tracking-wider">done</p>
               </div>
             </div>
@@ -150,7 +150,7 @@ const AccountInfo = ({ accountInfo }) => {
               />
             </div>
             <p className="text-[7px] text-black/30 dark:text-white/30 mt-2 leading-tight">
-              Bonus of ₹{activeBonus.toLocaleString('en-IN')} stays in the Sports/Casino bonus wallet and will transfer to Real Balance automatically only after 100% wagering is complete.
+              Bonus of â‚¹{activeBonus.toLocaleString('en-IN')} stays in the Sports/Casino bonus wallet and will transfer to Real Balance automatically only after 100% wagering is complete.
             </p>
           </div>
         )}
@@ -173,7 +173,7 @@ const AccountInfo = ({ accountInfo }) => {
           className="group flex flex-col items-center justify-center gap-1 bg-gray-100 dark:bg-white/5 hover:bg-brand/20 dark:hover:bg-brand/10 text-black dark:text-white font-black py-2 rounded-xl transition-all duration-500 border border-black/5 dark:border-white/5 uppercase text-[7px] tracking-[0.2em] active:scale-95 shadow-lg group-hover:shadow-brand/20 group-hover:border-brand"
           style={{ fontFamily: FONTS.ui }}
         >
-          <div className="w-6 h-6 rounded-md bg-brand/10 text-brand group-hover:bg-white group-hover:text-brand flex items-center justify-center group-hover:scale-110 transition-all shadow-[0_0_10px_rgba(230,160,0,0.15)]">
+          <div className="w-6 h-6 rounded-md bg-brand/10 text-brand group-hover:bg-white group-hover:text-brand flex items-center justify-center group-hover:scale-110 transition-all shadow-[0_0_10px_rgba(29,78,216,0.15)]">
             <FaWallet size={10} />
           </div>
           <span className="group-hover:text-black dark:text-white transition-colors">Withdraw</span>
@@ -182,11 +182,11 @@ const AccountInfo = ({ accountInfo }) => {
 
       {/* Cashback Claim Banner (Manual Mode) */}
       {accountInfo.claimable_cashback > 0 && accountInfo.cashback_mode === 'manual' && (
-        <div className="p-4 rounded-2xl bg-gradient-to-br from-purple-500/10 to-brand/10 border border-purple-500/20 backdrop-blur-md relative overflow-hidden animate-pulse">
+        <div className="p-4 rounded-2xl bg-gradient-to-br from-brand/10 to-cyan-500/10 border border-brand/20 backdrop-blur-md relative overflow-hidden animate-pulse">
           <div className="relative z-10 flex items-center justify-between">
             <div>
-              <p className="text-[8px] font-black text-purple-400 uppercase tracking-widest mb-0.5">Available Cashback</p>
-              <p className="text-lg font-black text-white" style={{ fontFamily: FONTS.head }}>₹{parseFloat(accountInfo.claimable_cashback).toLocaleString('en-IN')}</p>
+              <p className="text-[8px] font-black text-brand uppercase tracking-widest mb-0.5">Available Cashback</p>
+              <p className="text-lg font-black text-white" style={{ fontFamily: FONTS.head }}>â‚¹{parseFloat(accountInfo.claimable_cashback).toLocaleString('en-IN')}</p>
             </div>
             <button
               onClick={async () => {
@@ -209,7 +209,7 @@ const AccountInfo = ({ accountInfo }) => {
                   }
                 } catch (e) { console.error(e); }
               }}
-              className="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white text-[9px] font-black uppercase rounded-lg shadow-lg active:scale-95 transition-all"
+              className="px-4 py-2 bg-brand hover:bg-brandDark text-white text-[9px] font-black uppercase rounded-lg shadow-lg active:scale-95 transition-all"
             >
               Claim Now
             </button>
@@ -221,3 +221,11 @@ const AccountInfo = ({ accountInfo }) => {
 };
 
 export default AccountInfo;
+
+
+
+
+
+
+
+

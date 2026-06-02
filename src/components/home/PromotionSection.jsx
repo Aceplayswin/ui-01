@@ -45,8 +45,8 @@ function PromotionSection({ banners = [] }) {
     {
       title: "Welcome Bonus",
       description: "Get 100% bonus on your first deposit up to ₹10,000",
-      gradient: "from-amber-500/10 to-transparent",
-      icon: <FaGift className="text-amber-500" />,
+      gradient: "from-cyan-500/10 to-transparent",
+      icon: <FaGift className="text-cyan-400" />,
       buttonText: "Claim Now"
     },
     {
@@ -59,8 +59,8 @@ function PromotionSection({ banners = [] }) {
     {
       title: "VIP Club",
       description: "Join our exclusive VIP club for premium rewards and events",
-      gradient: "from-purple-500/10 to-transparent",
-      icon: <FaCrown className="text-purple-500" />,
+      gradient: "from-brand/10 to-transparent",
+      icon: <FaCrown className="text-brand" />,
       buttonText: "Join VIP"
     }
   ];

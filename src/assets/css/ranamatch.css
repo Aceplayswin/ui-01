@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap');
 
 :root {
     --bg-deep: #120f17;
@@ -12,8 +12,8 @@
     --brand-dark: #1e3a8a;
     --brand-glow: rgba(29, 78, 216, 0.18);
     --brand-gradient: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
-    --gold: #ffc107;
-    --gold-light: #ffed4e;
+    --gold: #22d3ee;
+    --gold-light: #a5f3fc;
     --blue-acc: #1d4ed8;
     --blue-light: #60a5fa;
     --text: #ffffff;
@@ -34,7 +34,7 @@
     min-height: 100vh;
   }
 
-  /* ── TOP BAR ── */
+  /* â”€â”€ TOP BAR â”€â”€ */
   .top-bar {
     background: #141414;
     border-bottom: 1px solid var(--border);
@@ -60,7 +60,7 @@
   .top-bar-right a { color: var(--text-muted); text-decoration: none; }
   .top-bar-right a:hover { color: var(--text); }
 
-  /* ── HEADER ── */
+  /* â”€â”€ HEADER â”€â”€ */
   header {
     background: var(--bg-nav);
     border-bottom: 2px solid var(--brand);
@@ -147,7 +147,7 @@
   }
   .btn-brand:hover { background: #60a5fa; box-shadow: 0 0 30px rgba(29, 78, 216, 0.32); }
 
-  /* ── DEMO PLAY BUTTON ── */
+  /* â”€â”€ DEMO PLAY BUTTON â”€â”€ */
   .btn-demo-play {
     display: inline-flex;
     align-items: center;
@@ -197,7 +197,7 @@
     50% { transform: translateY(-2px); }
   }
 
-  /* ── CATEGORY NAV ── */
+  /* â”€â”€ CATEGORY NAV â”€â”€ */
   .cat-nav {
     background: var(--bg-panel);
     border-bottom: 1px solid var(--border);
@@ -239,7 +239,7 @@
     letter-spacing: 0.3px;
   }
 
-  /* ── MAIN LAYOUT ── */
+  /* â”€â”€ MAIN LAYOUT â”€â”€ */
   .page-wrap {
     width: 100%;
     margin: 0;
@@ -257,7 +257,7 @@
     width: 100%;
   }
 
-  /* ── SIDEBAR LEFT ── */
+  /* â”€â”€ SIDEBAR LEFT â”€â”€ */
   .sidebar-left { display: flex; flex-direction: column; gap: 12px; }
 
   .side-section {
@@ -272,9 +272,9 @@
     gap: 8px;
     width: 100%;
     padding: 9px 14px;
-    background: linear-gradient(90deg, #6d28d9 0%, #7c3aed 55%, #a855f7 100%);
+    background: linear-gradient(90deg, #0f2a5c 0%, #1d4ed8 55%, #22d3ee 100%);
     border-bottom: 1px solid rgba(255,255,255,0.08);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 10px 24px rgba(124, 58, 237, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 10px 24px rgba(29, 78, 216, 0.22);
     font-family: var(--font-head);
     font-weight: 800;
     font-size: 13px;
@@ -321,7 +321,7 @@
   }
   @keyframes pulse-badge { 0%,100%{opacity:1} 50%{opacity:0.6} }
 
-  /* ── MAIN CONTENT ── */
+  /* â”€â”€ MAIN CONTENT â”€â”€ */
   .main-content { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
 
   /* Hero Banner */
@@ -402,7 +402,7 @@
     font-size: 120px;
     opacity: 0.12;
     animation: float 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 40px rgba(230, 160, 0, 0.4));
+    filter: drop-shadow(0 0 40px rgba(34, 211, 238, 0.35));
   }
   @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
 
@@ -472,9 +472,9 @@
     min-width: 0;
     padding: 8px 14px;
     border-radius: 10px;
-    background: linear-gradient(90deg, #6d28d9 0%, #7c3aed 52%, #a855f7 100%);
+    background: linear-gradient(90deg, #0f2a5c 0%, #1d4ed8 52%, #22d3ee 100%);
     border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 10px 24px rgba(124, 58, 237, 0.2);
+    box-shadow: 0 10px 24px rgba(29, 78, 216, 0.22);
     color: #fff;
     font-family: var(--font-head);
     font-weight: 800;
@@ -659,7 +659,7 @@
   .odd-btn:hover .odd-label { color: rgba(255,255,255,0.8); }
   .odd-btn:hover .odd-val { color: #fff; }
 
-  /* ── SIDEBAR RIGHT ── */
+  /* â”€â”€ SIDEBAR RIGHT â”€â”€ */
   .sidebar-right { display: flex; flex-direction: column; gap: 10px; }
 
   /* Auth Panel */
@@ -816,7 +816,7 @@
   .app-btn-text .sub { font-size: 8px; color: var(--text-muted); display: block; text-transform: uppercase; letter-spacing: 0.4px; }
   .app-btn-text .name { font-family: var(--font-head); font-weight: 700; font-size: 11px; }
 
-  /* ── FOOTER ── */
+  /* â”€â”€ FOOTER â”€â”€ */
   footer {
     background: #141414;
     border-top: 2px solid var(--brand);
@@ -893,7 +893,7 @@
     border-radius: 4px;
   }
 
-  /* ── EXCLUSIVE ELITE OFFERS ── */
+  /* â”€â”€ EXCLUSIVE ELITE OFFERS â”€â”€ */
   .elite-offers-section {
     margin-top: 24px;
   }
@@ -1042,7 +1042,7 @@
     fill: var(--card-glow-color, var(--brand));
   }
 
-  /* ── RESPONSIVE ── */
+  /* â”€â”€ RESPONSIVE â”€â”€ */
   @media (max-width: 1100px) {
     .page-wrap { grid-template-columns: 200px 1fr; }
     .sidebar-right { display: none; }
@@ -1060,7 +1060,7 @@
     nav { display: none; }
   }
 
-  /* ── SEPARATE SCROLLING FOR SIDEBARS AND MAIN CONTENT ── */
+  /* â”€â”€ SEPARATE SCROLLING FOR SIDEBARS AND MAIN CONTENT â”€â”€ */
   /* Uses .rana-layout wrapper instead of body so other pages are not affected */
   @media (min-width: 1101px) {
     .rana-layout {
@@ -1131,7 +1131,7 @@
     }
   }
 
-  /* ── GAME PROVIDERS ── */
+  /* â”€â”€ GAME PROVIDERS â”€â”€ */
   .providers-section {
     margin-top: 28px;
   }
@@ -1197,7 +1197,7 @@
     color: var(--brand);
   }
 
-  /* ── WHY CHOOSE US ── */
+  /* â”€â”€ WHY CHOOSE US â”€â”€ */
   .why-choose-section {
     margin-top: 28px;
   }
@@ -1300,7 +1300,7 @@
     width: 32px;
   }
 
-  /* ── FAQ KNOWLEDGE BASE ── */
+  /* â”€â”€ FAQ KNOWLEDGE BASE â”€â”€ */
   .faq-section {
     margin-top: 28px;
     margin-bottom: 16px;
@@ -1428,7 +1428,7 @@
     text-transform: none;
   }
 
-  /* ── RESPONSIVE ADAPTATIONS FOR NEW SECTIONS ── */
+  /* â”€â”€ RESPONSIVE ADAPTATIONS FOR NEW SECTIONS â”€â”€ */
   @media (max-width: 900px) {
     .promo-banners-grid {
       grid-template-columns: 1fr;
@@ -1489,5 +1489,6 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
 
 

@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --brand-color: #FF2D2D;
-  --brand-rgb: 255, 45, 45;
-  --brand-color-light: #FF2D2D;
-  --brand-color-dark: #FF2D2D;
-  --brand-gradient: linear-gradient(135deg, #FF2D2D 0%, #CC0000 100%);
-  --accent-glow: rgba(255, 45, 45, 0.1);
-  --yellow: #FF2D2D;
+  --brand-color: #1d4ed8;
+  --brand-rgb: 29, 78, 216;
+  --brand-color-light: #60a5fa;
+  --brand-color-dark: #1e3a8a;
+  --brand-gradient: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+  --accent-glow: rgba(29, 78, 216, 0.1);
+  --yellow: #22D3EE;
   --red: #FF2D2D;
   --bg: #0D0D0D;
   --secondary-bg: #1A1A1A;
   --bg2: #141414;
   --bg3: #1A1A1A;
   --bg4: #1F1F1F;
-  --border: rgba(201, 245, 0, 0.12);
+  --border: rgba(29, 78, 216, 0.12);
   --border2: rgba(255, 255, 255, 0.07);
   --text: #FFFFFF;
   --muted: #7A7A7A;
@@ -105,10 +105,10 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-/* ══════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    LIGHT MODE OVERRIDES
    Applied when html has .light class
-══════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 /* --- Global backgrounds & text --- */
 html.light body,
@@ -482,7 +482,7 @@ html.light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   margin-bottom: 16px;
   border-radius: 14px;
   color: #0b1220;
-  background: linear-gradient(135deg, #ffd76a, #1d4ed8);
+  background: linear-gradient(135deg, #a5f3fc, #1d4ed8);
   box-shadow: 0 16px 36px rgba(29, 78, 216, 0.28);
   font-family: var(--font-head);
   font-weight: 900;
@@ -536,7 +536,7 @@ html.light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
 }
 
 .auth-benefit span:last-child {
-  color: #ffd76a;
+  color: #a5f3fc;
   font-size: 11px;
   font-weight: 900;
 }
@@ -942,9 +942,9 @@ html.light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   }
 }
 
-/* ══════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    TOP UTILITY BAR
-══════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .topbar {
   background: #080808;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -1031,10 +1031,10 @@ html.light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   color: var(--muted);
 }
 
-/* ══════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    HEADER
    Updated for Full Responsiveness
-══════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .custom-header {
   position: relative;
   z-index: 200;
@@ -1358,9 +1358,9 @@ html.light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
 
 /* If user insisted on showing logo text even on 280px screens, we have to stack even more or use absolute positioning, but let's try this first. */
 
-/* ══════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    SPORT TABS
-══════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .sport-tabs-bar {
   background: var(--bg2);
   border-bottom: 1px solid var(--border2);
@@ -1534,12 +1534,12 @@ html.light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
 }
 
 .game-btn-avatar {
-  background-image: linear-gradient(45deg, #6b21a8, #a855f7, #6b21a8);
+  background-image: linear-gradient(45deg, #1d4ed8, #22d3ee, #1d4ed8);
   animation: gradientShift 2.5s ease infinite;
 }
 
 .game-btn-tennis {
-  background-image: linear-gradient(-45deg, #92400e, #f59e0b, #92400e);
+  background-image: linear-gradient(-45deg, #0f766e, #22d3ee, #0f766e);
   animation: gradientShift 2.3s ease infinite;
 }
 
@@ -1676,9 +1676,9 @@ html.light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   /* Allow slides to adjust to content height */
 }
 
-/* ══════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    HERO SECTION (Parimatch Port)
-══════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .hero {
   position: relative;
   overflow: hidden;
@@ -1843,15 +1843,15 @@ html.light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
 }
 
 .btn-hero-orange {
-  background: var(--brand-color);
-  color: #000;
-  box-shadow: 0 8px 30px rgba(255, 112, 0, 0.3);
+  background: linear-gradient(135deg, #22d3ee 0%, #1d4ed8 100%);
+  color: #00111f;
+  box-shadow: 0 8px 30px rgba(29, 78, 216, 0.3);
 }
 
 .btn-hero-orange:hover {
-  background: #ff8c00;
+  background: linear-gradient(135deg, #38bdf8 0%, #1d4ed8 100%);
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(255, 112, 0, 0.5);
+  box-shadow: 0 12px 40px rgba(29, 78, 216, 0.45);
 }
 
 .btn-hero-ghost {
@@ -2120,10 +2120,10 @@ body.menu-open [class*="easysocial"] {
   z-index: 100;
 }
 
-/* ══════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    EASYSOCIAL VISIBILITY CONTROL
    Hides widget globally, shows only on Home via .show-whatsapp
-══════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 /* Hide WhatsApp widget globally by default */
 #es-widget-container,
@@ -2160,4 +2160,5 @@ body.menu-open .es-chat-iconButton {
   visibility: hidden !important;
   pointer-events: none !important;
 }
+
 

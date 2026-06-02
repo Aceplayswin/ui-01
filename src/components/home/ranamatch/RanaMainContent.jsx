@@ -87,7 +87,7 @@ const RanaMainContent = () => {
             <div className="hero-content">
               <div className="hero-badge">🔥 Welcome Offer</div>
               <h1 className="hero-title">
-                GET <span className="gold">₹50,000</span><br />
+                GET <span className="accent">₹50,000</span><br />
                 <span className="accent">BONUS</span>
               </h1>
               <p className="hero-sub">100% First Deposit Bonus + 50 Free Spins<br />on your favourite games</p>

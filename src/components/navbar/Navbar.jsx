@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import React, { useEffect, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -123,16 +123,16 @@ function Navbar() {
   // Game Categories with icons matching the neon design
   // Game Categories for the sub-navbar
   const games = [
-    { name: "Lottery", icon: "🎟️" },
-    { name: "Crash Games", icon: "🚀" },
-    { name: "Roulette", icon: "🎡" },
-    { name: "Blackjack", icon: "🃏" },
-    { name: "Baccarat", icon: "💎" },
-    { name: "Dragon Tiger", icon: "🐯" },
-    { name: "Teen Patti", icon: "🎴" },
-    { name: "Poker", icon: "♠️" },
-    { name: "Game Shows", icon: "📺" },
-    { name: "Andar Bahar", icon: "🃏" },
+    { name: "Lottery", icon: "ðŸŽŸï¸" },
+    { name: "Crash Games", icon: "ðŸš€" },
+    { name: "Roulette", icon: "ðŸŽ¡" },
+    { name: "Blackjack", icon: "ðŸƒ" },
+    { name: "Baccarat", icon: "ðŸ’Ž" },
+    { name: "Dragon Tiger", icon: "ðŸ¯" },
+    { name: "Teen Patti", icon: "ðŸŽ´" },
+    { name: "Poker", icon: "â™ ï¸" },
+    { name: "Game Shows", icon: "ðŸ“º" },
+    { name: "Andar Bahar", icon: "ðŸƒ" },
   ]
   const [sportsLoading, setSportsLoading] = useState(false);
 
@@ -194,7 +194,7 @@ function Navbar() {
         const encodedUrl = btoa(data.data.game_url);
         navigate(`/game-url/${encodeURIComponent(encodedUrl)}/${encodeURIComponent(gameObj["Game Name"])}`);
       } else if (data.status_code === "balance_error") {
-        showToast("error", "Minimum balance of ₹100 required to play sports.");
+        showToast("error", "Minimum balance of â‚¹100 required to play sports.");
       } else if (data.status_code === "authorization_error" || data.status_code === "auth_error") {
         showToast("error", "Session expired. Please login again.");
         localStorage.removeItem("auth_secret_key");
@@ -437,7 +437,7 @@ function Navbar() {
         <div className="topbar" style={{ backgroundColor: COLORS.bg, borderBottom: `1px solid ${COLORS.bg4}` }}>
           <div className="topbar-left flex-1 min-w-0 h-full overflow-hidden">
             <div className="flex items-center gap-2 md:gap-4 whitespace-nowrap h-full">
-              <div className="topbar-item shrink-0"><span style={{ color: COLORS.brand }}>🕐</span> IST {new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour12: false, hour: '2-digit', minute: '2-digit' })}</div>
+              <div className="topbar-item shrink-0"><span style={{ color: COLORS.brand }}>ðŸ•</span> IST {new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour12: false, hour: '2-digit', minute: '2-digit' })}</div>
               <div className="live-badge shrink-0" style={{ backgroundColor: COLORS.red }}>LIVE</div>
 
               <div className="overflow-hidden flex-1 relative h-full flex items-center">
@@ -451,7 +451,7 @@ function Navbar() {
                             <span className="text-black/80 dark:text-white/80">{match.name}</span>
                             {match.viewers > 0 && (
                               <span className="inline-flex items-center gap-0.5 text-[9px] font-bold px-1.5 py-0.5 rounded-full" style={{ backgroundColor: `${COLORS.brand}22`, color: COLORS.brand }}>
-                                {idx % 2 === 0 ? '🔴' : '👁'} {match.viewers.toLocaleString()}
+                                {idx % 2 === 0 ? 'ðŸ”´' : 'ðŸ‘'} {match.viewers.toLocaleString()}
                               </span>
                             )}
                           </div>
@@ -466,7 +466,7 @@ function Navbar() {
                             <span className="text-black/80 dark:text-white/80">{match.name}</span>
                             {match.viewers > 0 && (
                               <span className="inline-flex items-center gap-0.5 text-[9px] font-bold px-1.5 py-0.5 rounded-full" style={{ backgroundColor: `${COLORS.brand}22`, color: COLORS.brand }}>
-                                {idx % 2 === 0 ? '🔴' : '👁'} {match.viewers.toLocaleString()}
+                                {idx % 2 === 0 ? 'ðŸ”´' : 'ðŸ‘'} {match.viewers.toLocaleString()}
                               </span>
                             )}
                           </div>
@@ -486,7 +486,7 @@ function Navbar() {
             <div className="topbar-item flex items-center text-black/70 dark:text-white/70 hover:text-black dark:text-white cursor-pointer transition-colors" title="India">
               <img src="https://flagcdn.com/w40/in.png" className="w-5 h-auto rounded-[2px] shadow-sm" alt="India" />
             </div>
-            <div className="topbar-item text-black/70 dark:text-white/70 hover:text-black dark:text-white cursor-pointer transition-colors">🌐 EN</div>
+            <div className="topbar-item text-black/70 dark:text-white/70 hover:text-black dark:text-white cursor-pointer transition-colors">ðŸŒ EN</div>
             {accountInfo?.service_support_url && (
               <div
                 className="topbar-item hover:text-black dark:text-white cursor-pointer transition-colors text-black/70 dark:text-white/70"
@@ -510,7 +510,7 @@ function Navbar() {
             <div className="custom-logo" onClick={handleLogoClick}>
               <img
                 src={getSafeLogoUrl(accountInfo?.service_site_logo)}
-                className="h-5 md:h-8 w-auto object-contain drop-shadow-[0_0_12px_rgba(230,160,0,0.3)] hover:scale-105 transition-transform duration-300"
+                className="h-5 md:h-8 w-auto object-contain drop-shadow-[0_0_12px_rgba(29,78,216,0.3)] hover:scale-105 transition-transform duration-300"
                 alt="Logo"
                 onError={(e) => { e.target.src = "/image.png"; }}
               />
@@ -542,7 +542,7 @@ function Navbar() {
                       <div className="flex flex-col items-end">
                         <span className="text-[6px] font-black uppercase tracking-widest leading-none text-emerald-500/70">Demo Balance</span>
                         <span className="text-[9px] font-black text-emerald-400" style={{ fontFamily: FONTS.ui }}>
-                          ₹0.00
+                          â‚¹0.00
                         </span>
                       </div>
                       <div className="w-5 h-5 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
@@ -572,21 +572,21 @@ function Navbar() {
               {/* Wagering Progress Pill */}
               {isWagering && (
                 <div
-                  className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-amber-500/10 border border-amber-500/20 cursor-pointer hover:bg-amber-500/20 transition-all group/wager"
+                  className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-brand/10 border border-brand/20 cursor-pointer hover:bg-brand/20 transition-all group/wager"
                   onClick={() => navigate('/active-bonus')}
                   title="View Wagering Progress"
                 >
                   <div className="flex flex-col items-end">
-                    <span className="text-[7px] font-black uppercase tracking-widest text-amber-500/60 leading-none">Wagering</span>
-                    <span className="text-[10px] font-black text-amber-500 leading-tight">{wagerPct}%</span>
+                    <span className="text-[7px] font-black uppercase tracking-widest text-brand/60 leading-none">Wagering</span>
+                    <span className="text-[10px] font-black text-brand leading-tight">{wagerPct}%</span>
                   </div>
-                  <div className="w-10 h-1 rounded-full bg-amber-500/20 overflow-hidden">
+                  <div className="w-10 h-1 rounded-full bg-brand/20 overflow-hidden">
                     <div
-                      className="h-full bg-amber-500 transition-all duration-1000"
+                      className="h-full bg-brand transition-all duration-1000"
                       style={{ width: `${wagerPct}%` }}
                     ></div>
                   </div>
-                  <FaGift className="text-amber-500 text-[10px] animate-bounce" />
+                  <FaGift className="text-brand text-[10px] animate-bounce" />
                 </div>
               )}
 
@@ -630,7 +630,7 @@ function Navbar() {
                   }}
                 >
                   {sportsLoading && activeIndex === index ? (
-                    <span className="tab-icon animate-spin">⏳</span>
+                    <span className="tab-icon animate-spin">â³</span>
                   ) : (
                     <span className="tab-icon">{game.icon}</span>
                   )}
@@ -691,7 +691,7 @@ function Navbar() {
                 </div>
                 <div>
                   <h4 className="text-xs font-black uppercase tracking-wider text-white" style={{ fontFamily: FONTS.head }}>Guest Mode</h4>
-                  <p className="text-[9px] text-white/50 font-bold uppercase tracking-tight">Explore with ₹0.00</p>
+                  <p className="text-[9px] text-white/50 font-bold uppercase tracking-tight">Explore with â‚¹0.00</p>
                 </div>
               </div>
 
@@ -950,7 +950,7 @@ function Navbar() {
               return null;
             })()}
           </div>
-          <p className="text-center text-[7px] text-black/10 dark:text-white/10 uppercase tracking-[0.4em] mt-1 font-bold">{accountInfo?.service_site_name || 'Site'} © 2025</p>
+          <p className="text-center text-[7px] text-black/10 dark:text-white/10 uppercase tracking-[0.4em] mt-1 font-bold">{accountInfo?.service_site_name || 'Site'} Â© 2025</p>
         </div>
       </div>
       {/* Login Modal */}
@@ -989,9 +989,9 @@ function Navbar() {
               }`}
             style={{ fontFamily: FONTS.ui }}
           >
-            <span className="text-sm font-bold">{toast.type === "success" ? "✓" : "⚠"}</span>
+            <span className="text-sm font-bold">{toast.type === "success" ? "âœ“" : "âš "}</span>
             <span className="text-xs font-medium">{toast.message}</span>
-            <button onClick={() => setToast(null)} className="ml-2 text-white/70 hover:text-white text-sm font-bold">✕</button>
+            <button onClick={() => setToast(null)} className="ml-2 text-white/70 hover:text-white text-sm font-bold">âœ•</button>
           </div>
         </div>
       )}
@@ -1001,3 +1001,10 @@ function Navbar() {
 }
 
 export default Navbar
+
+
+
+
+
+
+

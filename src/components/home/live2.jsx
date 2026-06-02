@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
@@ -297,7 +297,7 @@ const GameSection = ({ title, games }) => {
                                 <div className="see-all-grid gap-3 md:gap-6 animate-fadeInUp">
                                     {games.map((game, index) => (
                                         <div key={index} className="flex flex-col group cursor-pointer" onClick={() => handleGameClick(game)}>
-                                            <div className="relative aspect-[4/5] rounded-xl overflow-hidden p-[1px] bg-gradient-to-br from-white/10 via-transparent to-white/5 transition-all duration-500 group-hover:from-brand/50 group-hover:to-brand/20 group-hover:shadow-[0_0_30px_rgba(230,160,0,0.4)] group-hover:-translate-y-1">
+                                            <div className="relative aspect-[4/5] rounded-xl overflow-hidden p-[1px] bg-gradient-to-br from-white/10 via-transparent to-white/5 transition-all duration-500 group-hover:from-brand/50 group-hover:to-brand/20 group-hover:shadow-[0_0_30px_rgba(29,78,216,0.4)] group-hover:-translate-y-1">
                                                 <div className="relative w-full h-full rounded-[11px] overflow-hidden bg-gray-100 dark:bg-white/5">
                                                     <img
                                                         className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ${loadingForGames === game["Game UID"] ? "opacity-30 blur-sm" : ""
@@ -477,7 +477,7 @@ const GameSection = ({ title, games }) => {
                                         {confirmPopup.game["Game Name"]}
                                     </h3>
                                     <div className="flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-[0.2em] animate-pulse">
-                                        <span className="w-2 h-2 rounded-full bg-brand shadow-[0_0_10px_rgba(230,160,0,1)]"></span>
+                                        <span className="w-2 h-2 rounded-full bg-brand shadow-[0_0_10px_rgba(29,78,216,1)]"></span>
                                         Initializing Elite Experience
                                     </div>
                                 </div>
@@ -512,11 +512,11 @@ const GameSection = ({ title, games }) => {
                                         {step.label}
                                     </span>
                                     <div className={`w-5 h-5 rounded-full flex items-center justify-center border transition-all duration-700 ${loadingProgress > step.threshold
-                                        ? "border-brand/40 bg-brand/10 text-brand scale-110 shadow-[0_0_15px_rgba(230,160,0,0.2)]"
+                                        ? "border-brand/40 bg-brand/10 text-brand scale-110 shadow-[0_0_15px_rgba(29,78,216,0.2)]"
                                         : "border-black/5 dark:border-white/5 bg-gray-100 dark:bg-white/2"
                                         }`}>
                                         {loadingProgress > step.threshold ? (
-                                            <span className="text-[10px] font-bold">✓</span>
+                                            <span className="text-[10px] font-bold">âœ“</span>
                                         ) : (
                                             <div className="w-1 h-1 bg-gray-100 dark:bg-white/10 rounded-full animate-ping"></div>
                                         )}
@@ -550,11 +550,12 @@ const Live = () => {
     return (
         <div className="games-display space-y-6 overflow-hidden">
             {" "}
-            <GameSection title="⚽ Live Sports" games={liveSport} />
+            <GameSection title="âš½ Live Sports" games={liveSport} />
         </div>
     )
 }
 
 export default Live
+
 
 

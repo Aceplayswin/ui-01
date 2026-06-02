@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import sportImage from "./images/sport.webp";
 import cusinoImage from "./images/cusino.webp";
@@ -65,7 +65,7 @@ const FooterNav = () => {
         const encodedUrl = btoa(data.data.game_url);
         navigate(`/game-url/${encodeURIComponent(encodedUrl)}/${encodeURIComponent(gameObj["Game Name"])}`);
       } else if (data.status_code === "balance_error") {
-        showToast("error", "Minimum balance of ₹100 required to play sports.");
+        showToast("error", "Minimum balance of â‚¹100 required to play sports.");
       } else if (data.status_code === "authorization_error" || data.status_code === "auth_error") {
         showToast("error", "Session expired. Please login again.");
         localStorage.removeItem("auth_secret_key");
@@ -203,7 +203,7 @@ const FooterNav = () => {
               {item.isCenter ? (
                 <div className="flex flex-col items-center group/home">
                   <div className="absolute -inset-4 bg-brand/20 blur-2xl rounded-full opacity-0 group-hover/home:opacity-100 transition-opacity pointer-events-none"></div>
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-brand to-brandDark p-1 shadow-[0_0_25px_rgba(230,160,0,0.4)] relative">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-brand to-brandDark p-1 shadow-[0_0_25px_rgba(29,78,216,0.4)] relative">
                     <div className="w-full h-full rounded-full bg-black/10 dark:bg-black/40 flex items-center justify-center overflow-hidden">
                       <img src={item.icon} alt={item.label} className="w-8 h-8 object-contain drop-shadow-lg" />
                     </div>
@@ -219,7 +219,7 @@ const FooterNav = () => {
                 <div className="flex flex-col items-center group/item">
                   <div className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-300 ${item.active ? 'bg-brand/20 border-brand/40' : 'bg-gray-100 dark:bg-white/5 border-black/5 dark:border-white/5'} border mb-1`}>
                     {item.label === "Sport" && sportsLoading ? (
-                      <span className="text-brand animate-spin text-lg">⏳</span>
+                      <span className="text-brand animate-spin text-lg">â³</span>
                     ) : (
                       <img 
                         src={item.icon} 
@@ -247,9 +247,9 @@ const FooterNav = () => {
               }`}
             style={{ fontFamily: FONTS.ui }}
           >
-            <span className="text-sm font-bold">{toast.type === "success" ? "✓" : "⚠"}</span>
+            <span className="text-sm font-bold">{toast.type === "success" ? "âœ“" : "âš "}</span>
             <span className="text-xs font-medium">{toast.message}</span>
-            <button onClick={() => setToast(null)} className="ml-2 text-white/70 hover:text-white text-sm font-bold">✕</button>
+            <button onClick={() => setToast(null)} className="ml-2 text-white/70 hover:text-white text-sm font-bold">âœ•</button>
           </div>
         </div>
       )}
@@ -258,3 +258,4 @@ const FooterNav = () => {
 };
 
 export default FooterNav;
+

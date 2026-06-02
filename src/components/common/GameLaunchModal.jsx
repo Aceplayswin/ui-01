@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { FaPlay } from 'react-icons/fa';
 import { useColors } from '../../hooks/useColors';
@@ -114,7 +114,7 @@ export default function GameLaunchModal({ show, game, error, onClose }) {
                     Insufficient Balance
                   </h3>
                   <p className="text-black/60 dark:text-white/60 text-sm leading-relaxed px-2">
-                    A minimum deposit of <span className="text-black dark:text-white font-bold">₹100</span> is required to access this premium experience.
+                    A minimum deposit of <span className="text-black dark:text-white font-bold">â‚¹100</span> is required to access this premium experience.
                   </p>
                 </div>
               ) : localError === "authorization_error" ? (
@@ -231,7 +231,7 @@ export default function GameLaunchModal({ show, game, error, onClose }) {
                     {game["Game Name"]}
                   </h3>
                   <div className="flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-[0.2em] animate-pulse">
-                    <span className="w-2 h-2 rounded-full bg-brand shadow-[0_0_10px_rgba(230,160,0,1)]"></span>
+                    <span className="w-2 h-2 rounded-full bg-brand shadow-[0_0_10px_rgba(29,78,216,1)]"></span>
                     Initializing Elite Experience
                   </div>
                 </div>
@@ -268,11 +268,11 @@ export default function GameLaunchModal({ show, game, error, onClose }) {
                     {step.label}
                   </span>
                   <div className={`w-5 h-5 rounded-full flex items-center justify-center border transition-all duration-700 ${loadingProgress > step.threshold
-                    ? "border-brand/40 bg-brand/10 text-brand scale-110 shadow-[0_0_15px_rgba(230,160,0,0.2)]"
+                    ? "border-brand/40 bg-brand/10 text-brand scale-110 shadow-[0_0_15px_rgba(29,78,216,0.2)]"
                     : "border-black/5 dark:border-white/5 bg-gray-100 dark:bg-white/2"
                     }`}>
                     {loadingProgress > step.threshold ? (
-                      <span className="text-[10px] font-bold">✓</span>
+                      <span className="text-[10px] font-bold">âœ“</span>
                     ) : (
                       <div className="w-1 h-1 bg-gray-100 dark:bg-white/10 rounded-full animate-ping"></div>
                     )}
@@ -287,3 +287,4 @@ export default function GameLaunchModal({ show, game, error, onClose }) {
     </>
   );
 }
+

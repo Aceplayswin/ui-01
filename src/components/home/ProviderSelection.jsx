@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useColors } from '../../hooks/useColors';
 import { FONTS } from '../../constants/theme';
 import { apiGet } from '@/utils/apiFetch';
@@ -77,7 +77,7 @@ const ProviderSelection = () => {
               relative flex-shrink-0 px-5 py-2.5 rounded-xl text-[10px] md:text-[11px] font-black uppercase tracking-widest transition-all duration-300
               border backdrop-blur-md active:scale-95 group
               ${selectedProvider === provider.dbName
-                ? 'text-black shadow-[0_10px_20px_-10px_rgba(230,160,0,0.5)]'
+                ? 'text-black shadow-[0_10px_20px_-10px_rgba(29,78,216,0.5)]'
                 : 'text-black/60 dark:text-white/60 border-black/10 dark:border-white/10 hover:border-brand/40 hover:text-black dark:hover:text-white'}
             `}
             style={{
@@ -115,7 +115,7 @@ const ProviderSelection = () => {
         </div>
       ) : selectedProvider && !loading && providerGames && providerGames.length === 0 ? (
         <div className="mt-6 p-12 text-center rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-md animate-fadeIn transition-all duration-500">
-          <div className="text-5xl mb-4 opacity-30">🎮</div>
+          <div className="text-5xl mb-4 opacity-30">ðŸŽ®</div>
           <h3 className="text-white font-black text-sm uppercase tracking-widest mb-1" style={{ fontFamily: FONTS.head }}>Coming Soon</h3>
           <p className="text-white/40 font-bold uppercase tracking-widest text-[9px]" style={{ fontFamily: FONTS.ui }}>
             No games found for this provider in current region
@@ -127,3 +127,4 @@ const ProviderSelection = () => {
 };
 
 export default ProviderSelection;
+

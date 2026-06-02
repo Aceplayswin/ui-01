@@ -50,7 +50,7 @@ const ThemeSynchronizer = () => {
     // Derived values (RGB for transparency)
     const brandRGB = activeColors.brand.startsWith('#') 
       ? hexToRgb(activeColors.brand) 
-      : { r: 230, g: 160, b: 0 };
+      : { r: 29, g: 78, b: 216 };
     
     root.style.setProperty('--brand-rgb', `${brandRGB.r}, ${brandRGB.g}, ${brandRGB.b}`);
     root.style.setProperty('--accent-glow', `rgba(${brandRGB.r}, ${brandRGB.g}, ${brandRGB.b}, 0.1)`);

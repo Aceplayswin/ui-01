@@ -3,7 +3,23 @@ import { useSite } from "../../../context/SiteContext";
 
 const RanaSidebarRight = () => {
   const { accountInfo, setShowLogin, setShowRegister } = useSite();
-  const isLoggedIn = !!(accountInfo?.account_id && accountInfo.account_id !== "guest" && localStorage.getItem("auth_secret_key") && localStorage.getItem("auth_secret_key") !== "guest");
+  const isLoggedIn = !!(
+    accountInfo?.account_id &&
+    accountInfo.account_id !== "guest" &&
+    localStorage.getItem("auth_secret_key") &&
+    localStorage.getItem("auth_secret_key") !== "guest"
+  );
+
+  const formatBalance = (value) =>
+    Number(value || 0).toLocaleString('en-IN', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+
+  const realBalance = formatBalance(accountInfo?.account_balance);
+  const casinoBonus = formatBalance(accountInfo?.account_casino_bonus);
+  const sportsBonus = formatBalance(accountInfo?.account_sports_bonus);
+  const totalBalance = formatBalance(accountInfo?.account_total_balance ?? accountInfo?.account_balance);
 
   const recentWins = [
     { avatar: "👨", user: "Vikram_99", game: "Crazy Time", amount: "₹45,200" },
@@ -30,9 +46,13 @@ const RanaSidebarRight = () => {
             <div className="auth-body">
               <div className="form-group">
                 <label className="form-label">Ready to win?</label>
-                <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '16px' }}>Log in to access your account or register to get started.</p>
+                <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '16px' }}>
+                  Log in to access your account or register to get started.
+                </p>
               </div>
-              <button className="btn btn-brand btn-full" onClick={() => setShowLogin(true)}>Login Securely</button>
+              <button className="btn btn-brand btn-full" onClick={() => setShowLogin(true)}>
+                Login Securely
+              </button>
             </div>
           </>
         ) : (
@@ -41,15 +61,74 @@ const RanaSidebarRight = () => {
               <div className="auth-tab active" style={{ width: '200%' }}>My Profile</div>
             </div>
             <div className="auth-body">
-              <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <div style={{ textAlign: 'center', marginBottom: '14px' }}>
                 <div style={{ fontSize: '32px', marginBottom: '8px' }}>👤</div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontSize: '18px', color: '#fff', margin: 0 }}>{accountInfo?.account_username}</h3>
-                <p style={{ color: 'var(--brand)', fontFamily: "var(--font-display)", fontSize: '14px', fontWeight: 'bold' }}>₹{accountInfo?.account_balance || '0.00'}</p>
+                <h3 style={{ fontFamily: "var(--font-display)", fontSize: '18px', color: '#fff', margin: 0, lineHeight: 1.15 }}>
+                  {accountInfo?.account_username}
+                </h3>
+                <p
+                  style={{
+                    color: 'var(--text-muted)',
+                    fontSize: '10px',
+                    margin: '4px 0 0',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.18em'
+                  }}
+                >
+                  Account Overview
+                </p>
               </div>
-              <button className="btn btn-outline btn-full" onClick={() => {
-                localStorage.removeItem("auth_secret_key");
-                window.location.reload();
-              }}>Log Out</button>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '14px' }}>
+                {[
+                  { label: 'Real Balance', value: realBalance, strong: true },
+                  { label: 'Casino Bonus', value: casinoBonus },
+                  { label: 'Sports Bonus', value: sportsBonus },
+                  { label: 'Total Balance', value: totalBalance, strong: true },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    style={{
+                      padding: '10px 10px 9px',
+                      borderRadius: '14px',
+                      background: 'rgba(255,255,255,0.04)',
+                      border: '1px solid rgba(255,255,255,0.08)',
+                      minHeight: '68px',
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: '8px',
+                        fontWeight: 800,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.14em',
+                        color: 'var(--text-muted)',
+                        marginBottom: '6px'
+                      }}
+                    >
+                      {item.label}
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', lineHeight: 1 }}>
+                      <span style={{ fontSize: '10px', fontWeight: 800, color: 'var(--brand)' }}>₹</span>
+                      <span style={{ fontFamily: "var(--font-display)", fontSize: item.strong ? '14px' : '13px', fontWeight: 900, color: '#fff' }}>
+                        {item.value}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <button
+                className="btn btn-outline btn-full"
+                onClick={() => {
+                  localStorage.removeItem("auth_secret_key");
+                  localStorage.removeItem("account_id");
+                  window.location.reload();
+                }}
+              >
+                Log Out
+              </button>
             </div>
           </>
         )}

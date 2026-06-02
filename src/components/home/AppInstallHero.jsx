@@ -30,11 +30,11 @@ const AppInstallHero = ({ accountInfo }) => {
   return (
     <section className="relative py-12 md:py-20 overflow-hidden rounded-[2.5rem] my-8 group">
       {/* Dynamic Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#004d4d] via-[#002d2d] to-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0b1b3a] via-[#081122] to-black"></div>
 
       {/* Animated Glows */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#99f3ff]/5 blur-[80px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#22d3ee]/5 blur-[80px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
       <div className="relative container mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         {/* Left Side: Content */}
@@ -49,7 +49,7 @@ const AppInstallHero = ({ accountInfo }) => {
             </span>
             <h2 className="text-4xl md:text-6xl font-black text-white leading-[1.1]" style={{ fontFamily: FONTS.head }}>
               Elevate Your <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-[#99f3ff]">Gaming Experience</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-[#22d3ee]">Gaming Experience</span>
             </h2>
             <p className="text-white/60 text-lg md:text-xl mt-6 max-w-2xl leading-relaxed">
               Experience {siteName} Gaming & Sports Betting Platform with high odds, fast withdrawals, and exclusive promotions. Optimized for your device.
@@ -65,7 +65,7 @@ const AppInstallHero = ({ accountInfo }) => {
           >
             <button
               onClick={handleInstall}
-              className="px-10 py-5 rounded-2xl bg-brand text-black font-black uppercase tracking-widest text-sm hover:scale-105 active:scale-95 transition-all shadow-[0_20px_40px_rgba(230,160,0,0.3)] flex items-center gap-3"
+              className="px-10 py-5 rounded-2xl bg-brand text-black font-black uppercase tracking-widest text-sm hover:scale-105 active:scale-95 transition-all shadow-[0_20px_40px_rgba(29,78,216,0.3)] flex items-center gap-3"
             >
               <FaDownload /> {isInstalled ? 'Open App' : 'Install Now'}
             </button>
@@ -110,7 +110,7 @@ const AppInstallHero = ({ accountInfo }) => {
               <h3 className="text-lg font-bold text-black">Install app</h3>
               <div className="flex gap-1.5">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500/20"></div>
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/20"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-cyan-400/20"></div>
                 <div className="w-2.5 h-2.5 rounded-full bg-green-500/20"></div>
               </div>
             </div>
@@ -151,15 +151,15 @@ const AppInstallHero = ({ accountInfo }) => {
               </div>
 
               <div className="flex justify-end gap-3 pt-2">
-                <button className="px-6 py-2 rounded-xl bg-[#99f3ff] text-[#004d4d] text-xs font-black uppercase tracking-widest hover:brightness-95 transition-all">Install</button>
-                <button className="px-6 py-2 rounded-xl bg-[#004d4d] text-white text-xs font-black uppercase tracking-widest hover:brightness-110 transition-all">Cancel</button>
+                <button className="px-6 py-2 rounded-xl bg-[#22d3ee] text-[#003b46] text-xs font-black uppercase tracking-widest hover:brightness-95 transition-all">Install</button>
+                <button className="px-6 py-2 rounded-xl bg-[#0f172a] text-white text-xs font-black uppercase tracking-widest hover:brightness-110 transition-all">Cancel</button>
               </div>
             </div>
           </div>
 
           {/* Abstract Floating Elements */}
           <div className="absolute -top-10 -left-10 w-20 h-20 bg-brand/20 blur-2xl rounded-full animate-pulse"></div>
-          <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-[#99f3ff]/10 blur-3xl rounded-full animate-pulse decoration-1000"></div>
+          <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-[#22d3ee]/10 blur-3xl rounded-full animate-pulse decoration-1000"></div>
         </motion.div>
       </div>
     </section>
